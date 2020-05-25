@@ -1,0 +1,11 @@
+[package]
+name = "assignment_1"
+version = "0.1.0"
+authors = ["Lyndogwin <brand949@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bmp = "0.5.0"
+# ndarray = "0.13.1"
