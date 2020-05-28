@@ -1,18 +1,16 @@
-
 // std libraries
-
 use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 // external crates
-#[macro_use] extern crate bmp;
+#[macro_use] extern crate bmp; // couldn't get px! macro to work without #[macro_use]
 use bmp::{Image, Pixel};
 
 
 fn main() {
         // open file
     // NOTE: unwrap either returns the expected element or a "panic"
-    let mut f  = BufReader::new(File::open("bbost9_hard.txt").unwrap()); 
+    let mut f = BufReader::new(File::open("bbost9_medium.txt").unwrap()); 
     
     // read txt in as string
     let mut raw_map = String::new();
@@ -69,7 +67,6 @@ fn main() {
     for (x,y) in img.coordinates(){
         img.set_pixel(x,y, px!(scaled_map[counter], scaled_map[counter],scaled_map[counter]));
         counter += 1;
-
     }
 
     // save the image to a file
